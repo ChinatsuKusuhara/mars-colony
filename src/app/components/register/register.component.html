@@ -1,0 +1,15 @@
+<div class="page">
+  <form [formGroup]="registerForm" novalidate (ngSubmit)="registerColonist()">
+  <h1 class="registration">Registration</h1>
+      <input type="text" placeholder="Name" formControlName="name"/>
+      <input type="number" formControlName="age"/>
+
+      <select formControlName="job_id">
+        <option value="">Select Occupation</option>
+        <option *ngFor="let job of jobs" value="{{ job.id }}">{{job.name}}</option>
+      </select>
+      <button [disabled]="registerForm.status === 'INVALID'" class="submit">Register</button>
+  </form>
+  {{ registerForm.value | json }}
+  {{ registerForm.status | json }}
+<div>
