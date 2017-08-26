@@ -1,3 +1,20 @@
-<div>
-  <h1>encounter works</h1>
+<div class="page encounter-page">
+  <div class="encounters-top">
+    <h2>Recent Encounter</h2>
+    <p>See an alien? Report it!</p>
+
+    <ul class="alien-list">
+      <li *ngFor="let encounter of encounters">
+        <p>{{encounter.date}} - {{encounter.atype}}</p>
+        <p>{{encounter.action}}</p>>
+      </li>
+    </ul>
+  </div>
+  <div class="encounters-bottom">
+    <div class="report-link">
+      <a routerLink="/report">
+        <h2 class="report-encouter-text">Report Encounter</h2>
+      </a>
+    </div>
+  </div>
 </div>
