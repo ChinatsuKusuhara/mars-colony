@@ -22,7 +22,7 @@ import {
 })
 export class RegisterComponent implements OnInit {
 
-  public jobs: Job[];
+ jobs: Job[];
 
   registerForm = new FormGroup({
     name: new FormControl('', [
@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
       Validators.min(0)
     ]),
     job_id: new FormControl('none', [Validators.required])
-  })
+  });
 
   constructor(
     private colonistService: ColonistService,
@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    this.jobs = await this.jobService.getJobs();
+    const jobs = await this.jobService.getJobs();
   }
 
   async registerColonist() {
@@ -57,6 +57,7 @@ export class RegisterComponent implements OnInit {
 
     const colonist = await this.colonistService.registerColonist(newColonist);
     console.log('colonist was saved!', colonist);
+    console.log('Mars here I come!', this.registerForm);
   }
 
   private noNumbers(validNameRegex): ValidatorFn {
