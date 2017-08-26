@@ -24,7 +24,7 @@ export class ReportComponent implements OnInit {
 
   alien: Alien[];
 
-  registerForm = new FormGroup({ 
+  public reportForm = new FormGroup({ 
     atype: new FormControl('', [Validators.required]),
     action: new FormControl('', [Validators.required]),
   });
@@ -39,11 +39,10 @@ export class ReportComponent implements OnInit {
 
     this.alien = aliens;
   }
-  // async registerReport(){
-  //   const newReport: NewReport = {
-  //     date: '2011-11-11',
-  //     colonist_id: '3',  
-  //   }
-  // }
+  async registerReport() {
+    // const newReport: NewReport = {
+    //   date: '2011-11-11',
+    // }
+  }
   
 }
