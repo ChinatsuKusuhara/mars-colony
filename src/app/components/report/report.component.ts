@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlienService } from '../../services/alien';
+import { EncountersService } from '../../services/encounters';
 
 import { NewReport, Report } from '../../models/report';
 import { Alien } from '../../models/alien';
@@ -17,7 +18,8 @@ import {
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.scss'],
   providers: [
-    AlienService
+    AlienService,
+    EncountersService
   ]
 })
 export class ReportComponent implements OnInit {
@@ -30,7 +32,8 @@ export class ReportComponent implements OnInit {
   });
 
   constructor(
-    private alienService: AlienService
+    private alienService: AlienService,
+    private reportService: EncountersService
   ) {}
 
   async ngOnInit() {
@@ -40,9 +43,16 @@ export class ReportComponent implements OnInit {
     this.alien = aliens;
   }
   async registerReport() {
-    // const newReport: NewReport = {
-    //   date: '2011-11-11',
-    // }
+    const newReport: NewReport = {
+      date: '2011-11-11',
+      colonist_id: '3',
+      
+      atype: this.reportForm.get('atype').value,
+      action: this.reportForm.get('action').value
+    };
+    const report = await this.reportService.postEncounters(newReport);
+    console.log('colonis was saved', report);
+    console.log('Mars here I come!', this.reportForm);
   }
   
 }
