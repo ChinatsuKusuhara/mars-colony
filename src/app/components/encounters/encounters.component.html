@@ -5,8 +5,9 @@
 
     <ul class="alien-list">
       <li *ngFor="let encounter of encounters">
-        <p>{{encounter.date}} - {{encounter.atype}}</p>
-        <p>{{encounter.action}}</p>>
+        <div>{{encounter.date}} - {{encounter.atype}}
+        <p>{{encounter.action}}</p>
+        </div>
       </li>
     </ul>
   </div>
