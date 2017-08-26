@@ -12,9 +12,21 @@ export class EncountersService {
     getEncounters(): Promise<Report[]> {
       return this.http.get(this.encountersUrl)
                 .toPromise()
-                .then((response) => response.json().reports)
+                .then((response) => response.json().encounters)
                 .catch(this.handleError);
-    };
+    }
+  
+    postEncounters(encounter: NewReport): Promise<Report> {
+      const headers = new Headers({'Content0-type': 'application/json'});
+      const body = JSON.stringify({ encounter });
+
+      return this.http 
+                  .post(this.encountersUrl, body, { headers: headers})
+                  .toPromise()
+                  .then(response => response.json().encounter)
+                  .catch(this.handleError);
+    }
+   
 
     private handleError(error: any): Promise<any> {
       console.error('An error occurred', error);
