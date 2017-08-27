@@ -1,7 +1,6 @@
 <div class = "page register-page">
   <div class="header">
     <h1>Register</h1>
-    <h3>Safety on mars is our responsibility!</h3>
   </div> 
     <form [formGroup]="registerForm" novalidate (submit)="registerColonist()" class="register-form">
       <input type="text" placeholder="Full Name" formControlName="name">
@@ -9,7 +8,7 @@
       <input class="age-button" type="number" placeholder="Age" formControlName="age">
 
       <select formControlName="job_id" placeholder="Select Occupation">
-        <option value="">Select Occupation</option>
+        <option value="Select Occupation">Select Occupation</option>
         <option *ngFor="let job of jobs" value="{{job.id}}">{{job.name}}</option> 
       </select>
       <a routerLink="/encounters">
