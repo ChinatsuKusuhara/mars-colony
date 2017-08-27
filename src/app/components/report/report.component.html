@@ -1,8 +1,7 @@
-
 <div class = "page report-page">
     <h1>Report Encounter</h1>
     <div class="report-form">
-    <form [formGroup]="registerForm" novalidate (submit)="registerReport()" class="register-report">
+    <form [formGroup]="reportForm" novalidate (submit)="registerReport()" class="register-report">
       <!--<input type="text" placeholder="Select alien type">-->
 
       <select formControlName="atype">
@@ -10,13 +9,12 @@
         <option *ngFor="let alien of aliens" value="{{alien.id}}">{{alien.type}}</option> 
       </select>
 
-      <textarea class="report-text-area" type="text" placeholder="Action Taken" [formControlName]="action"></textarea>
+      <textarea class="report-text-area" type="text" placeholder="Action Taken" formControlName="action"></textarea>
     
       <a routerLink="/encounters">
         <button [disabled]="registerForm.status === 'INVALID'" type="submit">Submit Report</button>
       </a>
     </form>
-
     {{registerForm.value | json}}
     {{registerForm.status | json}}
     </div>

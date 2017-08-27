@@ -24,12 +24,12 @@ import {
 })
 export class ReportComponent implements OnInit {
 
-  alien: Alien[];
+  aliens: Alien[];
 
-  public reportForm = new FormGroup({ 
+  reportForm = new FormGroup({ 
     atype: new FormControl('', [Validators.required]),
-    action: new FormControl('', [Validators.required]),
-  });
+    action: new FormControl('', [Validators.required])
+  })
 
   constructor(
     private alienService: AlienService,
@@ -40,7 +40,7 @@ export class ReportComponent implements OnInit {
     const aliens = await this.alienService.getAliens();
     console.log(aliens);
 
-    this.alien = aliens;
+    this.aliens = aliens;
   }
   async registerReport() {
     const newReport: NewReport = {
@@ -51,8 +51,7 @@ export class ReportComponent implements OnInit {
       action: this.reportForm.get('action').value
     };
     const report = await this.reportService.postEncounters(newReport);
-    console.log('colonis was saved', report);
+    console.log('colonist was saved', report);
     console.log('Mars here I come!', this.reportForm);
   }
-  
 }
