@@ -1,8 +1,19 @@
+.header {
+  text-align: center;
+}
 .alien-list {
   height: 60vh;
   overflow: scroll;
-  background-color: black;
-    p {
-      color: white;
-    }
+  background-color: white;
+}
+.aliens {
+  color: black;
+  list-style-type: none;
+}
+.report-encounter-text {
+  text-align: center;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
