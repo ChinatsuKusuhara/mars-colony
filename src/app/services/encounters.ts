@@ -17,7 +17,7 @@ export class EncountersService {
     }
   
     postEncounters(encounter: NewReport): Promise<Report> {
-      const headers = new Headers({'Content0-type': 'application/json'});
+      const headers = new Headers({'Content-type': 'application/json'});
       const body = JSON.stringify({ encounter });
 
       return this.http 
@@ -29,7 +29,6 @@ export class EncountersService {
    
 
     private handleError(error: any): Promise<any> {
-      console.error('An error occurred', error);
       return Promise.reject(error.message || error);
     } 
 }
