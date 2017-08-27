@@ -1,5 +1,5 @@
 
-<section class="page page-report">
+<div class="page page-report">
     <div class="container">
         <h1>Register</h1>
         <form class="mars-report-form" [formGroup]="reportForm" (ngSubmit)="registerReport()" novalidate>
@@ -11,4 +11,4 @@
             <button [disabled]="reportForm.status === 'INVALID'" type="submit" class="report-btn">Submit Report</button>
         </form>
     </div>
-</section>
+  </div>

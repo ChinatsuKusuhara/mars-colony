@@ -16,7 +16,6 @@ export class EncountersComponent implements OnInit {
 
   async ngOnInit() {
     const encounter = await this.encountersService.getEncounters();
-    console.log(encounter);
     this.encounters = encounter;
   }
 
