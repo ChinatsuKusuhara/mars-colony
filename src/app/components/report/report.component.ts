@@ -55,21 +55,4 @@ export class ReportComponent implements OnInit {
     await this.reportService.postEncounters(newReport);
           this.router.navigate(['encounters']);
   }
-  
-  // async geate(){
-  //   const date = new Date
-  //   return `${date.getFullYear()}-${date.getMonth()} + 1}-${date.getDate()}`;
-  // }
-  // async registerReport() {
-  //   const newReport : NewReport = {
-  //     date: '2011-11-11',
-  //     colonist_id: '3',
-      
-  //     atype: this.reportForm.get('atype').value,
-  //     action: this.reportForm.get('action').value
-  //   };
-  //   const report = await this.reportService.postEncounters(newReport);
-  //   console.log('colonist was saved', report);
-  //   console.log('Mars here I come!', this.reportForm);
-  // }
 }
