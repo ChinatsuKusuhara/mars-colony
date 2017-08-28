@@ -1,14 +1,16 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  width: 1120px;
+  width: 875px;
 }
 .page-report {
-  background: #e1e1e1;
+  background: url('/assets/images/gaxy.jpg');
   height: 100vh;
+  background-attachment: fixed;
 }
 .header {
   text-align: center;
+  color: white;
 }
 h3 {
   line-height: 0;
@@ -34,8 +36,9 @@ h3 {
   margin-top:1rem;
 }
 button {
-  background: #e1e1e1;
-  color: white;
+  background: white;
+  color: black;
+  text-transform: uppercase;
   border: none;
   font-size: 2rem;
   width: 100%;

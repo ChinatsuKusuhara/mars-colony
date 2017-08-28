@@ -4,7 +4,7 @@
       <h2>Recent Encounter</h2>
       <p>See an alien? Report it!</p>
     </div>
-    <ul class="alien-list">
+    <ul class="alien-list container">
       <li class="aliens" *ngFor="let encounter of encounters">
         <div>{{encounter.date}} - {{encounter.atype}}
         <p>{{encounter.action}}</p>

@@ -1,15 +1,29 @@
 .register-page {
-  background: #e1e1e1;
+  background: url('/assets/images/gaxy.jpg');
   height: 100vh;
+  background-attachment: fixed;
+}
+.register-page-content {
+  padding-top: 10rem;
 }
 .header {
+  color: white;
   text-align: center;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+}
+.container {
+  margin-left:auto;
+  margin-right: auto;
+  width: 875px;
+  background-color: white;
 }
 .register-form {
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  padding-top: 1rem;
 }
 input {
   border: none;
@@ -36,12 +50,14 @@ select:hover {
   color: white;
 }
 button {
-  background: #e1e1e1;
-  color: white;
+  background: 0 0;
+  color: black;
   border: none;
   font-size: 2rem;
   width: 100%;
 }
 .button {
+  margin-bottom: 2rem;
   margin-top: 10rem; 
+  border: 1px solid black;
 }
