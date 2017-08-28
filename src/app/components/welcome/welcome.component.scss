@@ -1,16 +1,13 @@
 .page-home {
-  background: url('/assets/images/morningInMars.jpg');
+  background: url('/assets/images/night-sky.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  background-attachment: fixed;
 }
 .header {
   color: white;
 }
-
-
-
-
 .pulser {
   position: relative;
 }

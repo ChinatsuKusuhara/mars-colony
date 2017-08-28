@@ -4,6 +4,7 @@
         <h1>Report an alien</h1>
         <h3>Safety on mars is our responsibility!</h3>
     </div>
+    <div class="container">
         <form class="mars-report-form" [formGroup]="reportForm" (ngSubmit)="registerReport()" novalidate>
             <select class="alien-select" name="mars-alien-report" id="mars-alien-report" formControlName="atype">
                 <option value="">Select alien type</option>
@@ -12,4 +13,5 @@
             <textarea class="text-area" name="mars-action-report" id="mars-action-report" cols="30" rows="10" formControlName="action" placeholder="Action taken"></textarea>
             <button class="button" [disabled]="reportForm.status === 'INVALID'" type="submit" class="report-btn">Submit Report</button>
         </form>
+    </div>
   </div>
