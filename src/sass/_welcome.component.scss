@@ -1,14 +1,18 @@
 .page-home {
-  background: url('/assets/images/night-sky.jpg');
-  background-size: cover;
+  background: url('/assets/images/welcome.jpg') repeat-x center top;
+  position: relative;
+  max-width: 100%;
+  background-size: cover, 150px 369px, cover;
   background-repeat: no-repeat;
   height: 100vh;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
 }
-.header {
+.welcome-header {
   font-size: 2rem;
   color: white;
-  margin-top: 6rem;
+  margin-top: 8rem;
   text-transform: uppercase;
 }
 .pulser {
@@ -23,8 +27,8 @@
 
 .pulse {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 55%;
+  left: 5%;
   width: 400px;
   height: 400px;
   -webkit-border-radius: 50%;

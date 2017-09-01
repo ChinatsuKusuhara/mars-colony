@@ -1,20 +1,20 @@
 <div class = "page register-page">
-  <div class="register-page-content">
+  <div class="container">
     <div class="header">
-      <h1>Register</h1>
+      <h1 class="title">Member Registration</h1>
     </div>
-    <div class="container">
+    <div class="registers">
       <form [formGroup]="registerForm" novalidate (submit)="registerColonist()" class="register-form">
-        <input type="text" placeholder="Full Name" formControlName="name">
+        <span><i class="fa fa-id-card" aria-hidden="true"></i><input type="text" placeholder="Full Name" formControlName="name"></span>
       
-        <input class="age-button" type="number" placeholder="Age" formControlName="age">
+        <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><input class="age-button" type="number" placeholder="Age" formControlName="age"></span>
 
         <select formControlName="job_id" placeholder="Select Occupation">
-          <option value="Select Occupation">Select Occupation</option>
+          <option value="Select Occupation">Select Occupation..</option>
           <option *ngFor="let job of jobs" value="{{job.id}}">{{job.name}}</option> 
         </select>
         <a routerLink="/encounters">
-          <button  class="button" [disabled]="registerForm.status === 'INVALID'" type="submit">Check In</button>
+          <button  class="button" [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
         </a>
       </form>
     </div>
