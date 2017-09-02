@@ -5,9 +5,9 @@
     </div>
     <div class="registers">
       <form [formGroup]="registerForm" novalidate (submit)="registerColonist()" class="register-form">
-        <span><i class="fa fa-id-card" aria-hidden="true"></i><input type="text" placeholder="Full Name" formControlName="name"></span>
+        <span class="fa-font"><i class="fa fa-id-card" aria-hidden="true"></i><input type="text" placeholder="Full Name" formControlName="name"></span>
       
-        <span><i class="fa fa-birthday-cake" aria-hidden="true"></i><input class="age-button" type="number" placeholder="Age" formControlName="age"></span>
+        <span class="fa-font"><i class="fa fa-birthday-cake" aria-hidden="true"></i><input class="age-button" type="number" placeholder="Age" formControlName="age"></span>
 
         <select formControlName="job_id" placeholder="Select Occupation">
           <option value="Select Occupation">Select Occupation..</option>

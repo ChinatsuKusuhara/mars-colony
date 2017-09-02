@@ -17,6 +17,12 @@ html {
 h1.title {
   font-size: 1.75rem;  
   color: $color-red;
+  @include desktop {
+
+  }
+  @include tablet {
+    
+  }
 }
 
 
