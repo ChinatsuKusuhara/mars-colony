@@ -1,6 +1,6 @@
 
 .page-report {
-  background: url('/assets/images/report.jpg') repeat-x center 70px;
+  background: url('/assets/images/report.jpg') repeat-x center;
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
@@ -35,4 +35,7 @@ h3 {
   height: 20rem;
   margin-top:1rem;
   font-size: 1rem;
+}
+div form button.button{
+  margin-top: 3rem;
 }
