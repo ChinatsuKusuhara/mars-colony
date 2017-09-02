@@ -4,6 +4,7 @@
   height: 100vh;
   background-attachment: fixed;
 }
+
 .header {
   background: #000;
   border-bottom: 1px solid #000;
@@ -34,6 +35,14 @@ input {
   background: 0 0;
   margin-bottom: 3rem;
   padding-left: .5rem;
+  @media only screen and (min-width: 600px) {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  span {
+    display: flex;
+  }
 }
 input:hover {
   background: grey;
@@ -48,15 +57,9 @@ select {
   width: 100%;
 }
 select:hover {
-  color: white;
+  color: $color-creme;
 }
-button {
-  background: 0 0;
-  color: black;
-  border: none;
-  font-size: 2rem;
-  width: 100%;
-}
+
 .fa::before {
   padding-right: 1rem;
 }
