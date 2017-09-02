@@ -1,8 +1,8 @@
 
 <div class="page page-report">
+    <div class="content">
     <div class="header">
-        <h1>Report an alien</h1>
-        <h3>Safety on mars is our responsibility!</h3>
+        <h1 class="title">Report an alien</h1>
     </div>
     <div class="container">
         <form class="mars-report-form" [formGroup]="reportForm" (ngSubmit)="registerReport()" novalidate>
@@ -13,5 +13,6 @@
             <textarea class="text-area" name="mars-action-report" id="mars-action-report" cols="30" rows="10" formControlName="action" placeholder="Action taken"></textarea>
             <button class="button" [disabled]="reportForm.status === 'INVALID'" type="submit">Submit Report</button>
         </form>
+    </div>
     </div>
   </div>

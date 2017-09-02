@@ -1,8 +1,3 @@
-h1.title {
-  font-size: 1.75rem;  
-  color: $color-red;
-}
-
 .register-page {
   background: url('/assets/images/register.jpg') repeat-x center;
   background-size: cover;
@@ -22,7 +17,6 @@ h1.title {
   background: hsla(0,0%,100%,.8);
   font-size: 1.5rem;
   margin-top: 3rem;
-  
   .register-form {
     display: flex;
     flex-direction: column;
@@ -42,7 +36,7 @@ input {
   padding-left: .5rem;
 }
 input:hover {
-  background: white;
+  background: grey;
 }
 select {
   border: none;
