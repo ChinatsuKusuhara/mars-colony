@@ -1,8 +1,10 @@
 
 .page-report {
-  background: url('/assets/images/report.jpg');
+  background: url('/assets/images/report.jpg') repeat-x center 70px;
+  background-size: cover;
   height: 100vh;
   background-attachment: fixed;
+  
 }
 .header {
   text-align: center;
@@ -16,6 +18,7 @@ h3 {
   flex-direction: column;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  padding-top: 1.5rem;
 }
 .alien-select {
   border: none;
@@ -28,6 +31,8 @@ h3 {
   padding-left: .5rem;
 }
 .text-area {
+  background: hsla(0,0%,100%,.8);
   height: 20rem;
   margin-top:1rem;
+  font-size: 1rem;
 }

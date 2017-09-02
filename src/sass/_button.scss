@@ -4,15 +4,17 @@ button {
   background: $color-green;
   color: $color-creme;
   text-transform: uppercase;
-  font-size: 2rem;
-  margin-left: 5rem;  
+  font-size: 1.5rem;
 }
 .button {
-  margin-top: 5rem;
-  width: 16rem;
+  margin-top: 1rem;
+  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 3rem;
 }
-
+a {
+  text-align: center;
+  padding-top: 3rem;
+}
 //used in register 

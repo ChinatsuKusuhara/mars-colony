@@ -1,8 +1,13 @@
 .encounter-page {
-  background-image: url('assets/images/encounter.jpg')
+  background-image: url('assets/images/encounter.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
 }
 .header {
   text-align: center;
+  color: $color-red;
 }
 h2 {
   text-transform: uppercase;
@@ -10,17 +15,20 @@ h2 {
 .alien-list {
   height: 60vh;
   overflow: scroll;
-  background-color: black;
+  background:hsla(0,0%,100%,.8);
 }
 .aliens {
-  color: white;
+  color: red;
   list-style-type: none;
+    div {
+      padding-top: 1rem; 
+    }
 }
 .report-encounter-text {
-  text-align: center;
-  border: 1px solid black;
-  width: 185px;
-  margin: 0 auto;
+  background: $color-green;
+  color: $color-creme;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 a {
   color: black;

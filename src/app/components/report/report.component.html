@@ -11,7 +11,7 @@
                 <option *ngFor='let alien of aliens' value="{{ alien.type }}">{{ alien.type }}</option>
             </select>
             <textarea class="text-area" name="mars-action-report" id="mars-action-report" cols="30" rows="10" formControlName="action" placeholder="Action taken"></textarea>
-            <button class="button" [disabled]="reportForm.status === 'INVALID'" type="submit" class="report-btn">Submit Report</button>
+            <button class="button" [disabled]="reportForm.status === 'INVALID'" type="submit">Submit Report</button>
         </form>
     </div>
   </div>
